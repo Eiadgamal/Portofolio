@@ -77,7 +77,7 @@ export default function FullWidthTabs() {
         Description: "A tool designed to help users solve math problems easily.",
         Link: "https://your-live-demo-link1.com",
         Video: "/videos/aritmatika.mp4",
-        Img: "/coding.png",
+        Img: `${import.meta.env.BASE_URL}coding.png`,
       },
       {
         id: "autochat",

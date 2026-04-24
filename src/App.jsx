@@ -9,6 +9,8 @@ import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
+import Playground from "./playground/Playground";
+import Cairokee from "./playground/cairokee/Cairokee";
 import { AnimatePresence } from 'framer-motion';
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
@@ -68,10 +70,12 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portofolio">
       <Routes>
         <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
+        <Route path="/playground" element={<Playground />} />
+        <Route path="/playground/cairokee" element={<Cairokee />} />
       </Routes>
     </BrowserRouter>
   );
